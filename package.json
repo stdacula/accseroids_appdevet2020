@@ -1,0 +1,31 @@
+{
+  "homepage": "https://stdacula.github.io//accseroids_appdevet2020",
+  "name": "augmented-rp",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "cors": "^2.8.3",
+    "express": "^4.15.3",
+    "nodemon": "^1.11.0",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "shipit-deploy": "^2.4.0",
+    "shipit-yarn": "^0.2.0",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.7"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "start": "yarn server:start & react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "server:start": "nodemon server/index.js"
+    
+  },
+  "proxy": "http://localhost:8080"
+}
